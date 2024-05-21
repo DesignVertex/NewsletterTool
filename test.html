@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adish Web Chat</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #e9ecef;
+        }
+        #chat-header {
+            background-color: #343a40;
+            color: #ffffff;
+            padding: 15px;
+            text-align: center;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="chat-container">
+        <div id="chat-header">Chat With VardhamanGPT</div>
+        <div id="chat-box"></div>
+        <div id="chat-footer"></div>
+    </div>
+
+    <script src="https://sf-cdn.coze.com/obj/unpkg-va/flow-platform/chat-app-sdk/0.1.0-beta.2/libs/oversea/index.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            new CozeWebSDK.WebChatClient({
+                config: {
+                    bot_id: '7338012682504749061',
+                },
+                componentProps: {
+                    title: 'Coze',
+                },
+                container: document.getElementById('chat-box')
+            });
+        });
+    </script>
+
+</body>
+</html>
